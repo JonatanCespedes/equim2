@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head') %> 
+
+<body>
+    <%- include('partials/header') %> 
+
+    <br>
+
+    <main>
+        <div class="container py-5">
+            <div class="row mt-3">
+                <div class="col">
+                    <h2 class="d-flex justify-content-center mb-3">Mi compra</h2>
+                    <form id="procesar-pago" action="#">
+                        <div class="form-group row">
+                            <label for="cliente" class="col-12 col-md-2 col-form-label h2">Cliente :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="text" class="form-control" id="cliente"
+                                    placeholder="Ingresa nombre cliente" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-12 col-md-2 col-form-label h2">Correo :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo" required>
+                            </div>
+                        </div>
+
+                        <div id="carrito" class="table-responsive">
+                            <table class="table" id="lista-compra">
+                                <thead>
+                                    <tr>
+                                        <th> Producto</th>
+                                        <th> Codigo</th>
+                                        <th>Precio</th>
+                                        <th> Unidades</th>
+                                        <th> Sub Total</th>
+                                        <th> Eliminar</th>
+                                    </tr>
+                                    </thead>
+    <tbody>
+        <tr>
+                                
+                                <td> lavandina</td>
+                                <td>111111</td>   
+                                  <td>$120</td>
+                                  <td><select name="" id=""> 
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                    </select> </td>
+                                   <td>$120 </td>
+                                    <td><a href="#" class="btn-block">X</a> </td>
+                                </th>
+                                </tr>
+                                <td> detergente</td>
+                                <td>222222</td>   
+                                  <td>$100</td>
+                                  <td><select name="" id=""> 
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                    </select> </td>
+                                   <td>$100 </td>
+                                    <td><a href="#" class="btn-block">X</a> </td> </td>
+                                    </th>
+                                 </tr>   
+                                  <tr>
+                                    <td> desodorante de piso</td>
+                                    <td>333333</td>   
+                                      <td>$90</td>
+                                      <td><select name="" id=""> 
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                        </select> </td>
+                                       <td>$90 </td>
+                                        <td><a href="#" class="btn-block">X</a> </td></td>
+                                    </th>
+                                  </tr>
+                                  </table>  
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                                
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+
+                            </table>
+                        </div>
+
+                        <div>                        
+
+                        </div>
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-4 mb-2">
+                                <a href="index.ejs" class="btn btn-info btn-block">Seguir comprando</a>
+                            </div>
+                            
+                            <div>
+                                <div class="col-10-xs">
+                                    <a href="error.ejs" class="btn btn-warning -block"  id="vaciar-compra">Vaciar compra</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <a href="" class="btn btn-success btn-block" id="procesar-compra">Realizar compra</a>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </main>
+
+</section>
+
+<!-- ENVIO -->
+<section class="envio col-12 col-lg-8">
+    <h4>Formas de envío</h4>
+    <!-- RADIO BUTTONS -->
+    <div class="radio-buttons">
+        <div>
+            <label for="sucursal-radio">Retiro en sucursal </label>
+            <input type="radio" name="envio" value="sucursal" class="radio" id="sucursal-radio" onclick="radio(0)" required>
+        </div>
+        <div>
+            <label for="domicilio-radio">Envío a domicilio </label>
+            <input type="radio" name="envio" value="domicilio" class="radio" id="domicilio-radio" onclick="radio(1)" required>
+        </div>
+    </div>
+    <!-- SUCURSAL -->
+    <div class="sucursal none" id="sucursal-inputs">
+        <div>
+            <label for="sucursal">Sucursal</label>
+            <select name="sucursal" id="sucursal" class="input">
+                <option value="none"> </option>
+                <option value="sucursal1">Sucursal 1</option>
+                <option value="sucursal2">Sucursal 2</option>
+                <option value="sucursal3">Sucursal 3</option>
+            </select>
+        </div>
+    </div>
+    
+    </div>
+</section>
+<%- include('partials/footer') %> >
+</body>
+
+</html>
